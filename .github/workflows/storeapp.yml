@@ -17,3 +17,5 @@ jobs:
 
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
+      python .\TestStoreOwner.py
+      if: ${{ always() }}
