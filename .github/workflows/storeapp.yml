@@ -15,6 +15,12 @@ jobs:
         python-version: '3.11'
         architecture: 'x64'
 
+    - name: Lint with Ruff
+      run: |
+        pip install ruff
+        ruff --output-format=github .
+      continue-on-error: true
+
     - name: Display Python version
       run: | 
             python -c "import sys; print(sys.version)"
