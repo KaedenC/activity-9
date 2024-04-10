@@ -16,6 +16,7 @@ jobs:
         architecture: 'x64'
 
     - name: Display Python version
-      run: python -c "import sys; print(sys.version)"
-      python .\TestStoreOwner.py
+      run: | 
+            python -c "import sys; print(sys.version)"
+            python TestStoreOwner.py
       if: ${{ always() }}
